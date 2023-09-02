@@ -1,29 +1,18 @@
 {
-  "name": "pets-and-claws",
-  "version": "1.0.0",
   "scripts": {
-    "start": "eleventy --serve & yarn run start:lambda",
-    "build": "eleventy & yarn run build:lambda",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build:lambda": "netlify-lambda build src/lambda"
+    "build-and-serve": "npm run build && npm run serve",
+    "build:preview": "hugo --cleanDestinationDir -DFE --minify --baseURL \"${DEPLOY_PRIME_URL:-/}\"",
+    "build:production": "hugo --cleanDestinationDir --minify",
+    "build": "hugo --cleanDestinationDir -e dev -DFE",
+    "hugo:version": "hugo version",
+    "serve": "netlify dev -c \"hugo serve -DFE --minify -w\""
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Vishva2003/pet-store-web-application"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@11ty/eleventy": "^0.5.4",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
-    "clean-css": "^4.2.1",
-    "netlify-lambda": "^1.0.2"
-  },
-  "proxy": {
-    "/.netlify/functions": {
-      "target": "http://localhost:3000",
-      "pathRewrite": {
-        "^/\\.netlify/functions": ""
-      }
-    }
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "hugo-extended": "^0.86.0",
+    "jquery": "^3.5.1",
+    "netlify-cli": "^5.2.10",
+    "popper.js": "^1.16.1"
   }
 }
