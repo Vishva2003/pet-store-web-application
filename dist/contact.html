@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Paws & Claws: The Premier Pet Emporium</title>
 	<link rel="icon" href="favicon.ico">
-	<link rel="stylesheet" href="adminreg.css">
+	<link rel="stylesheet" href="contact.css">
+
 </head>
 <body>
 	<header>
@@ -17,42 +18,34 @@
 	<ul class="nav-area">
 	<li><a href="index.html">Home</a></li>
 	<li><a href="userlogin.html">sign in</a></li>
-	<li><a href="about.html">About Us</a></li>
-	<li><a href="#">Contact</a></li>
+	<li><a href="about.html">About us</a></li>
 	</ul>
 	</div>
 	<div class="Login-box">
-		<h2>Admin Registration</h2>
-		<form action="">
+		<h2>Contact US</h2>
+		
+		<form action="/contact1" method="POST">
 			<div class="user-box">
-				<input type="text" name="" id="" required="">
+				<input type="text" name="username" id="" required="">
 				<label for="">Username</label>
 			</div>
-            <div class="user-box">
-				<input type="email" name="" id="" required="">
-				<label for="">Email</label>
-            </div>    
 			<div class="user-box">
-				<input type="password" name="" id="" required="">
-				<label for="">Password</label>
+				<input type="email" name="email" id="" required="">
+				<label for="">Email</label>
 			</div>
-            <div class="user-box">
-				<input type="password" name="" id="" required="">
-				<label for="">Confirm Password</label>
+            <div class="user-box1">
+    
+				<input type="text" style="height:100px; width:350px;" name="message" id="" required="">
+				<label for="">Message</label>
 			</div>
-			<a href="adminlogin.html">
+
+			<button ><div class="box"><input type="submit" class="btn" value="Post It!"></div>
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
-				Login
-			</a>
+			</button>
 		</form>
-		
-		<div class="login_signup">Already have an account? <a href="adminlogin.html" id="signin">Sign in</a></div>
-	
-	
-	</div>
 	</header>
 	
 	
